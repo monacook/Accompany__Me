@@ -15,6 +15,11 @@
 		951EE15D1CF38D910063C6A9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 951EE15B1CF38D910063C6A9 /* LaunchScreen.storyboard */; };
 		951EE1681CF38D910063C6A9 /* fakeCallTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE1671CF38D910063C6A9 /* fakeCallTests.swift */; };
 		951EE1731CF38D910063C6A9 /* fakeCallUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE1721CF38D910063C6A9 /* fakeCallUITests.swift */; };
+		951EE1831CF395160063C6A9 /* ReceiveCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE1821CF395160063C6A9 /* ReceiveCallViewController.swift */; };
+		951EE1851CF397CD0063C6A9 /* CancelButtonDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE1841CF397CD0063C6A9 /* CancelButtonDelegate.swift */; };
+		951EE1881CF3AD930063C6A9 /* ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 951EE1871CF3AD930063C6A9 /* ringtone.mp3 */; };
+		951EE18A1CF3AF4A0063C6A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951EE1891CF3AF4A0063C6A9 /* AVFoundation.framework */; };
+		951EE18C1CF3C74A0063C6A9 /* AnswerCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +54,11 @@
 		951EE16E1CF38D910063C6A9 /* fakeCallUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = fakeCallUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		951EE1721CF38D910063C6A9 /* fakeCallUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = fakeCallUITests.swift; sourceTree = "<group>"; };
 		951EE1741CF38D910063C6A9 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		951EE1821CF395160063C6A9 /* ReceiveCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ReceiveCallViewController.swift; path = ../ReceiveCallViewController.swift; sourceTree = "<group>"; };
+		951EE1841CF397CD0063C6A9 /* CancelButtonDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CancelButtonDelegate.swift; sourceTree = "<group>"; };
+		951EE1871CF3AD930063C6A9 /* ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ringtone.mp3; sourceTree = "<group>"; };
+		951EE1891CF3AF4A0063C6A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
+		951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCallViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +66,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951EE18A1CF3AF4A0063C6A9 /* AVFoundation.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -79,6 +90,7 @@
 		951EE1431CF38D900063C6A9 = {
 			isa = PBXGroup;
 			children = (
+				951EE1891CF3AF4A0063C6A9 /* AVFoundation.framework */,
 				951EE14E1CF38D910063C6A9 /* fakeCall */,
 				951EE1661CF38D910063C6A9 /* fakeCallTests */,
 				951EE1711CF38D910063C6A9 /* fakeCallUITests */,
@@ -99,10 +111,14 @@
 		951EE14E1CF38D910063C6A9 /* fakeCall */ = {
 			isa = PBXGroup;
 			children = (
+				951EE1861CF3AD730063C6A9 /* audio */,
+				951EE1821CF395160063C6A9 /* ReceiveCallViewController.swift */,
 				951EE14F1CF38D910063C6A9 /* AppDelegate.swift */,
 				951EE1511CF38D910063C6A9 /* ViewController.swift */,
 				951EE1531CF38D910063C6A9 /* Main.storyboard */,
+				951EE1841CF397CD0063C6A9 /* CancelButtonDelegate.swift */,
 				951EE1591CF38D910063C6A9 /* Assets.xcassets */,
+				951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */,
 				951EE15B1CF38D910063C6A9 /* LaunchScreen.storyboard */,
 				951EE15E1CF38D910063C6A9 /* Info.plist */,
 				951EE1561CF38D910063C6A9 /* fakeCall.xcdatamodeld */,
@@ -126,6 +142,14 @@
 				951EE1741CF38D910063C6A9 /* Info.plist */,
 			);
 			path = fakeCallUITests;
+			sourceTree = "<group>";
+		};
+		951EE1861CF3AD730063C6A9 /* audio */ = {
+			isa = PBXGroup;
+			children = (
+				951EE1871CF3AD930063C6A9 /* ringtone.mp3 */,
+			);
+			name = audio;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -196,7 +220,7 @@
 				TargetAttributes = {
 					951EE14B1CF38D910063C6A9 = {
 						CreatedOnToolsVersion = 7.3.1;
-						DevelopmentTeam = 93DU6VN4H3;
+						DevelopmentTeam = 2K9WG3X98K;
 					};
 					951EE1621CF38D910063C6A9 = {
 						CreatedOnToolsVersion = 7.3.1;
@@ -235,6 +259,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951EE1881CF3AD930063C6A9 /* ringtone.mp3 in Resources */,
 				951EE15D1CF38D910063C6A9 /* LaunchScreen.storyboard in Resources */,
 				951EE15A1CF38D910063C6A9 /* Assets.xcassets in Resources */,
 				951EE1551CF38D910063C6A9 /* Main.storyboard in Resources */,
@@ -262,8 +287,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				951EE1851CF397CD0063C6A9 /* CancelButtonDelegate.swift in Sources */,
+				951EE1831CF395160063C6A9 /* ReceiveCallViewController.swift in Sources */,
 				951EE1581CF38D910063C6A9 /* fakeCall.xcdatamodeld in Sources */,
 				951EE1521CF38D910063C6A9 /* ViewController.swift in Sources */,
+				951EE18C1CF3C74A0063C6A9 /* AnswerCallViewController.swift in Sources */,
 				951EE1501CF38D910063C6A9 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -408,10 +436,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = fakeCall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingdojo.fakeCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -419,10 +450,13 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = fakeCall/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.codingdojo.fakeCall;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
