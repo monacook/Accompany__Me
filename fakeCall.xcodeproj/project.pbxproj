@@ -20,6 +20,7 @@
 		951EE1881CF3AD930063C6A9 /* ringtone.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 951EE1871CF3AD930063C6A9 /* ringtone.mp3 */; };
 		951EE18A1CF3AF4A0063C6A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951EE1891CF3AF4A0063C6A9 /* AVFoundation.framework */; };
 		951EE18C1CF3C74A0063C6A9 /* AnswerCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */; };
+		951EE18E1CF51B980063C6A9 /* MapkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE18D1CF51B980063C6A9 /* MapkitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +60,7 @@
 		951EE1871CF3AD930063C6A9 /* ringtone.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = ringtone.mp3; sourceTree = "<group>"; };
 		951EE1891CF3AF4A0063C6A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCallViewController.swift; sourceTree = "<group>"; };
+		951EE18D1CF51B980063C6A9 /* MapkitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapkitViewController.swift; path = ../MapkitViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 			children = (
 				951EE1861CF3AD730063C6A9 /* audio */,
 				951EE1821CF395160063C6A9 /* ReceiveCallViewController.swift */,
+				951EE18D1CF51B980063C6A9 /* MapkitViewController.swift */,
 				951EE14F1CF38D910063C6A9 /* AppDelegate.swift */,
 				951EE1511CF38D910063C6A9 /* ViewController.swift */,
 				951EE1531CF38D910063C6A9 /* Main.storyboard */,
@@ -291,6 +294,7 @@
 				951EE1831CF395160063C6A9 /* ReceiveCallViewController.swift in Sources */,
 				951EE1581CF38D910063C6A9 /* fakeCall.xcdatamodeld in Sources */,
 				951EE1521CF38D910063C6A9 /* ViewController.swift in Sources */,
+				951EE18E1CF51B980063C6A9 /* MapkitViewController.swift in Sources */,
 				951EE18C1CF3C74A0063C6A9 /* AnswerCallViewController.swift in Sources */,
 				951EE1501CF38D910063C6A9 /* AppDelegate.swift in Sources */,
 			);

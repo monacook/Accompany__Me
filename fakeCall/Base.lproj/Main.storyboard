@@ -58,6 +58,13 @@
                                     <action selector="sendMessage:" destination="BYZ-38-t0r" eventType="touchUpInside" id="dMM-GV-PXW"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lvZ-zk-qva">
+                                <rect key="frame" x="104" y="476" width="76" height="30"/>
+                                <state key="normal" title="mapkit"/>
+                                <connections>
+                                    <action selector="mapkitButtonPressed:" destination="BYZ-38-t0r" eventType="touchUpInside" id="oOX-aE-vfC"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
@@ -66,11 +73,31 @@
                         <outlet property="playButton" destination="rkz-Kh-lLU" id="TEp-o7-gwC"/>
                         <outlet property="recordButton" destination="Kg5-HR-3Ey" id="VSs-TT-d09"/>
                         <segue destination="oMl-yM-cZ2" kind="presentation" identifier="phoneCall" id="07c-YF-PtY"/>
+                        <segue destination="r8z-UF-VlW" kind="presentation" identifier="mapkitSegue" id="A3S-JV-53T"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1356" y="-739"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="JkB-RS-GVR">
+            <objects>
+                <viewController id="r8z-UF-VlW" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="9Bt-SY-6tl"/>
+                        <viewControllerLayoutGuide type="bottom" id="l6b-vl-vks"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="n0S-8r-Jud">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="CKr-tG-0s8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1814" y="-739"/>
         </scene>
         <!--Receive Call View Controller-->
         <scene sceneID="IsC-bF-cH0">

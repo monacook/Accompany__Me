@@ -334,6 +334,9 @@ class ViewController: UIViewController, CancelButtonDelegate, UIImagePickerContr
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func mapkitButtonPressed(sender: UIButton) {
+        performSegueWithIdentifier("mapkitSegue", sender: self)
+    }
     
     
 
