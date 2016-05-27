@@ -154,6 +154,10 @@ class ViewController: UIViewController, CancelButtonDelegate, UIImagePickerContr
         // Do any additional setup after loading the view, typically from a nib.
     }
     
+    override func viewDidAppear(animated:Bool){
+   print("Should be empty now", NSUserDefaults.standardUserDefaults().arrayForKey("incidentsArray"))
+    }
+    
     func loadRecordingUI() {
 //        recordButton = UIButton(frame: CGRect(x: 64, y: 64, width: 128, height: 64))
         recordButton.setTitle("Tap to Record", forState: .Normal)
@@ -249,6 +253,17 @@ class ViewController: UIViewController, CancelButtonDelegate, UIImagePickerContr
             let controller = navigationController.topViewController as! ReceiveCallViewController
             controller.cancelButtonDelegate = self
         }
+        if segue.identifier == "mapkitSegue" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! MapkitViewController
+            controller.cancelButtonDelegate = self
+        }
+        
+        if segue.identifier == "loginSegue" {
+            let navigationController = segue.destinationViewController as! UINavigationController
+            let controller = navigationController.topViewController as! LoginViewController
+            controller.cancelButtonDelegate = self
+        }
     }
     
     func cancelButtonPressedFrom(controller: UIViewController) {
@@ -334,9 +349,31 @@ class ViewController: UIViewController, CancelButtonDelegate, UIImagePickerContr
         self.dismissViewControllerAnimated(true, completion: nil)
     }
     
+    @IBAction func mapkitButtonPressed(sender: UIButton) {
+        performSegueWithIdentifier("mapkitSegue", sender: self)
+    }
     
+    @IBAction func loginButtonPressed(sender: AnyObject) {
+        performSegueWithIdentifier("loginSegue", sender: self)
+        
+    }
     
 
+    @IBAction func registerButtonPressed(sender: AnyObject) {
+        performSegueWithIdentifier("registerSegue", sender: self)
+        
+    }
+    
+    
+    
+    @IBAction func manageAccountButtonPressed(sender: UIButton) {
+        performSegueWithIdentifier("profileSegue", sender: self)
+        
+    }
+    
+    
+    
+    
 }
 
 extension String {
