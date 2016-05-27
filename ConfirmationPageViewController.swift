@@ -210,8 +210,36 @@ class ConfirmationPageViewController: UITableViewController {
     
     func saveIncidentTypes(typeID: NSNumber) {
         print("Look at this!", typeID)
-        let postString = "incidentID=\(typeID)&categoryIDs=\(incidentIDArray!)"
-        print(postString)
+        for incident in incidentIDArray! {
+            let myURL = NSURL(string: "http://52.38.127.224/incidents/add_incident_type")
+            let request = NSMutableURLRequest(URL: myURL!)
+            request.HTTPMethod = "POST"
+            let postString = "incidentID=\(typeID)&categoryID=\(incident)"
+            print(postString)
+            request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+            
+            let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
+                data, response, error in
+                if error != nil {
+                    print("error = \(error)")
+                    return
+                }
+                var err: NSError?
+                
+                do {
+                    if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary {
+                        print("after saving types", jsonResult)
+                    }//closes if let jsonResult
+                }//closes do
+                catch {
+                    print(error)
+                }
+            }//closes let task
+            task.resume()
+
+            
+        }//closes for loop
+    
     }
         
         
