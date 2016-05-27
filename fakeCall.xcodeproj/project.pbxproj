@@ -21,6 +21,15 @@
 		951EE18A1CF3AF4A0063C6A9 /* AVFoundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 951EE1891CF3AF4A0063C6A9 /* AVFoundation.framework */; };
 		951EE18C1CF3C74A0063C6A9 /* AnswerCallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */; };
 		951EE18E1CF51B980063C6A9 /* MapkitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 951EE18D1CF51B980063C6A9 /* MapkitViewController.swift */; };
+		956472A31CF57950000AE953 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472A21CF57950000AE953 /* CheckBox.swift */; };
+		956472A51CF6A70C000AE953 /* ConfirmationPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472A41CF6A70C000AE953 /* ConfirmationPageViewController.swift */; };
+		956472A71CF76B6E000AE953 /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472A61CF76B6E000AE953 /* LoginViewController.swift */; };
+		956472A91CF76BFD000AE953 /* RegistrationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472A81CF76BFD000AE953 /* RegistrationViewController.swift */; };
+		956472AB1CF76DBD000AE953 /* ContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472AA1CF76DBD000AE953 /* ContactsViewController.swift */; };
+		956472AD1CF76ECF000AE953 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472AC1CF76ECF000AE953 /* ProfileViewController.swift */; };
+		956472AF1CF7D56E000AE953 /* ManageContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472AE1CF7D56E000AE953 /* ManageContactsViewController.swift */; };
+		956472B11CF7E64D000AE953 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472B01CF7E64D000AE953 /* ContactCell.swift */; };
+		95FCFCBD1CF56588002E854C /* IncidentReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FCFCBC1CF56588002E854C /* IncidentReportViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -61,6 +70,15 @@
 		951EE1891CF3AF4A0063C6A9 /* AVFoundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AVFoundation.framework; path = System/Library/Frameworks/AVFoundation.framework; sourceTree = SDKROOT; };
 		951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnswerCallViewController.swift; sourceTree = "<group>"; };
 		951EE18D1CF51B980063C6A9 /* MapkitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = MapkitViewController.swift; path = ../MapkitViewController.swift; sourceTree = "<group>"; };
+		956472A21CF57950000AE953 /* CheckBox.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CheckBox.swift; sourceTree = "<group>"; };
+		956472A41CF6A70C000AE953 /* ConfirmationPageViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ConfirmationPageViewController.swift; path = ../ConfirmationPageViewController.swift; sourceTree = "<group>"; };
+		956472A61CF76B6E000AE953 /* LoginViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
+		956472A81CF76BFD000AE953 /* RegistrationViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RegistrationViewController.swift; sourceTree = "<group>"; };
+		956472AA1CF76DBD000AE953 /* ContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactsViewController.swift; sourceTree = "<group>"; };
+		956472AC1CF76ECF000AE953 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
+		956472AE1CF7D56E000AE953 /* ManageContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageContactsViewController.swift; path = ../ManageContactsViewController.swift; sourceTree = "<group>"; };
+		956472B01CF7E64D000AE953 /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		95FCFCBC1CF56588002E854C /* IncidentReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncidentReportViewController.swift; path = ../IncidentReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,10 +133,19 @@
 			children = (
 				951EE1861CF3AD730063C6A9 /* audio */,
 				951EE1821CF395160063C6A9 /* ReceiveCallViewController.swift */,
+				956472AE1CF7D56E000AE953 /* ManageContactsViewController.swift */,
 				951EE18D1CF51B980063C6A9 /* MapkitViewController.swift */,
+				956472A41CF6A70C000AE953 /* ConfirmationPageViewController.swift */,
+				95FCFCBC1CF56588002E854C /* IncidentReportViewController.swift */,
+				956472A21CF57950000AE953 /* CheckBox.swift */,
 				951EE14F1CF38D910063C6A9 /* AppDelegate.swift */,
 				951EE1511CF38D910063C6A9 /* ViewController.swift */,
 				951EE1531CF38D910063C6A9 /* Main.storyboard */,
+				956472B01CF7E64D000AE953 /* ContactCell.swift */,
+				956472AC1CF76ECF000AE953 /* ProfileViewController.swift */,
+				956472AA1CF76DBD000AE953 /* ContactsViewController.swift */,
+				956472A61CF76B6E000AE953 /* LoginViewController.swift */,
+				956472A81CF76BFD000AE953 /* RegistrationViewController.swift */,
 				951EE1841CF397CD0063C6A9 /* CancelButtonDelegate.swift */,
 				951EE1591CF38D910063C6A9 /* Assets.xcassets */,
 				951EE18B1CF3C74A0063C6A9 /* AnswerCallViewController.swift */,
@@ -291,12 +318,21 @@
 			buildActionMask = 2147483647;
 			files = (
 				951EE1851CF397CD0063C6A9 /* CancelButtonDelegate.swift in Sources */,
+				956472AB1CF76DBD000AE953 /* ContactsViewController.swift in Sources */,
 				951EE1831CF395160063C6A9 /* ReceiveCallViewController.swift in Sources */,
+				956472A51CF6A70C000AE953 /* ConfirmationPageViewController.swift in Sources */,
+				956472AD1CF76ECF000AE953 /* ProfileViewController.swift in Sources */,
+				956472A31CF57950000AE953 /* CheckBox.swift in Sources */,
 				951EE1581CF38D910063C6A9 /* fakeCall.xcdatamodeld in Sources */,
 				951EE1521CF38D910063C6A9 /* ViewController.swift in Sources */,
+				956472B11CF7E64D000AE953 /* ContactCell.swift in Sources */,
+				956472AF1CF7D56E000AE953 /* ManageContactsViewController.swift in Sources */,
+				956472A91CF76BFD000AE953 /* RegistrationViewController.swift in Sources */,
 				951EE18E1CF51B980063C6A9 /* MapkitViewController.swift in Sources */,
 				951EE18C1CF3C74A0063C6A9 /* AnswerCallViewController.swift in Sources */,
+				95FCFCBD1CF56588002E854C /* IncidentReportViewController.swift in Sources */,
 				951EE1501CF38D910063C6A9 /* AppDelegate.swift in Sources */,
+				956472A71CF76B6E000AE953 /* LoginViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -529,6 +565,7 @@
 				951EE1791CF38D910063C6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		951EE17A1CF38D910063C6A9 /* Build configuration list for PBXNativeTarget "fakeCallTests" */ = {
 			isa = XCConfigurationList;
@@ -537,6 +574,7 @@
 				951EE17C1CF38D910063C6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		951EE17D1CF38D910063C6A9 /* Build configuration list for PBXNativeTarget "fakeCallUITests" */ = {
 			isa = XCConfigurationList;
@@ -545,6 +583,7 @@
 				951EE17F1CF38D910063C6A9 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
