@@ -159,7 +159,7 @@ class ConfirmationPageViewController: UITableViewController {
     
     func somethingWrongAlert() {
         
-        let alert = UIAlertController(title: "Oops!!", message: "Looks like you got here without actually reporting something. Go back!", preferredStyle: UIAlertControllerStyle.Alert)
+        let alert = UIAlertController(title: "Oops!!", message: "Looks like you got here without actually reporting something. Log back in!", preferredStyle: UIAlertControllerStyle.Alert)
         
         let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default){ action in
             print("okay")
@@ -197,7 +197,7 @@ class ConfirmationPageViewController: UITableViewController {
                     print("after registration button", jsonResult)
                     let incidentID = jsonResult["addedIncident"]
                     print("longsoughtid", incidentID)
-                    self.saveIncidentTypes(incidentID as! NSNumber)
+                    self.saveIncidentTypes(incidentID as! Int)
                     }//closes if let jsonResult
             }//closes do
             catch {
@@ -208,16 +208,19 @@ class ConfirmationPageViewController: UITableViewController {
 
     }
     
-    func saveIncidentTypes(typeID: NSNumber) {
+    func saveIncidentTypes(typeID: Int) {
         print("Look at this!", typeID)
+       
         for incident in incidentIDArray! {
+
             let myURL = NSURL(string: "http://52.38.127.224/incidents/add_incident_type")
             let request = NSMutableURLRequest(URL: myURL!)
             request.HTTPMethod = "POST"
-            let postString = "incidentID=\(typeID)&categoryID=\(incident)"
+            var postString = "incidentID=\(typeID)&categoryID=\(incident)"
             print(postString)
+               
             request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
-            
+//             }closes for loop
             let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
                 data, response, error in
                 if error != nil {
@@ -227,8 +230,9 @@ class ConfirmationPageViewController: UITableViewController {
                 var err: NSError?
                 
                 do {
-                    if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary {
+                    if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary{
                         print("after saving types", jsonResult)
+                    
                     }//closes if let jsonResult
                 }//closes do
                 catch {
@@ -238,13 +242,33 @@ class ConfirmationPageViewController: UITableViewController {
             task.resume()
 
             
-        }//closes for loop
+        } //closes for loop
+    displayAlertMessage("Thank you for submitting your report.")
     
     }
+    
+    func displayAlertMessage(userMessage: String) {
+        var alert = UIAlertController(title:"Alert", message: userMessage, preferredStyle: UIAlertControllerStyle.Alert)
+        let okAction = UIAlertAction(title:"Ok", style:UIAlertActionStyle.Default) { action in
+            self.resetUserDefaults()
+        }
+        alert.addAction(okAction)
+        self.presentViewController(alert, animated:true, completion:nil)
         
+    }
+    
+    func resetUserDefaults(){
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("isReportingLocation")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("incidentsArray")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("incidentTitles")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("locationCoords")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("incidentDescription")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("incidentDate")
+        NSUserDefaults.standardUserDefaults().removeObjectForKey("newIncidentType")
+        NSUserDefaults.standardUserDefaults().synchronize()
+        performSegueWithIdentifier("backToHomeSegue", sender: self)
+
         
-//        performSegueWithIdentifier("backToHomeSegue", sender: self)
-        
-        
+    }
     
 }
