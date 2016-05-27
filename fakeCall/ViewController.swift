@@ -376,11 +376,11 @@ class ViewController: UIViewController, CancelButtonDelegate, UIImagePickerContr
     
 }
 
-extension String {
-    func stringByAppendingPathComponent(path: String) -> String {
-        let nsSt = self as NSString
-        return nsSt.stringByAppendingPathComponent(path)
-    }
-}
+//extension String {
+//    func stringByAppendingPathComponent(path: String) -> String {
+//        let nsSt = self as NSString
+//        return nsSt.stringByAppendingPathComponent(path)
+//    }
+//}
 
 

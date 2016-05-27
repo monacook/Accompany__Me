@@ -61,6 +61,14 @@ class MapkitViewController: UIViewController, MKMapViewDelegate, CLLocationManag
     }
     
     
+    @IBAction func pinMapButtonPressed(sender: UIButton) {
+        performSegueWithIdentifier("pinsSegue", sender: self)
+    }
+    
+    
+    
+    
+    
     @IBAction func cancelButtonPressed(sender: UIBarButtonItem) {
         cancelButtonDelegate?.cancelButtonPressedFrom(self)
 

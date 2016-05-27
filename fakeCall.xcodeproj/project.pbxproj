@@ -29,6 +29,8 @@
 		956472AD1CF76ECF000AE953 /* ProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472AC1CF76ECF000AE953 /* ProfileViewController.swift */; };
 		956472AF1CF7D56E000AE953 /* ManageContactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472AE1CF7D56E000AE953 /* ManageContactsViewController.swift */; };
 		956472B11CF7E64D000AE953 /* ContactCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472B01CF7E64D000AE953 /* ContactCell.swift */; };
+		956472B31CF85BE0000AE953 /* PizzaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472B21CF85BE0000AE953 /* PizzaViewController.swift */; };
+		956472B51CF89572000AE953 /* MapOfPinsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 956472B41CF89572000AE953 /* MapOfPinsViewController.swift */; };
 		95FCFCBD1CF56588002E854C /* IncidentReportViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95FCFCBC1CF56588002E854C /* IncidentReportViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -78,6 +80,8 @@
 		956472AC1CF76ECF000AE953 /* ProfileViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ProfileViewController.swift; sourceTree = "<group>"; };
 		956472AE1CF7D56E000AE953 /* ManageContactsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ManageContactsViewController.swift; path = ../ManageContactsViewController.swift; sourceTree = "<group>"; };
 		956472B01CF7E64D000AE953 /* ContactCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ContactCell.swift; sourceTree = "<group>"; };
+		956472B21CF85BE0000AE953 /* PizzaViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PizzaViewController.swift; sourceTree = "<group>"; };
+		956472B41CF89572000AE953 /* MapOfPinsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MapOfPinsViewController.swift; sourceTree = "<group>"; };
 		95FCFCBC1CF56588002E854C /* IncidentReportViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = IncidentReportViewController.swift; path = ../IncidentReportViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -141,6 +145,8 @@
 				951EE14F1CF38D910063C6A9 /* AppDelegate.swift */,
 				951EE1511CF38D910063C6A9 /* ViewController.swift */,
 				951EE1531CF38D910063C6A9 /* Main.storyboard */,
+				956472B41CF89572000AE953 /* MapOfPinsViewController.swift */,
+				956472B21CF85BE0000AE953 /* PizzaViewController.swift */,
 				956472B01CF7E64D000AE953 /* ContactCell.swift */,
 				956472AC1CF76ECF000AE953 /* ProfileViewController.swift */,
 				956472AA1CF76DBD000AE953 /* ContactsViewController.swift */,
@@ -321,6 +327,7 @@
 				956472AB1CF76DBD000AE953 /* ContactsViewController.swift in Sources */,
 				951EE1831CF395160063C6A9 /* ReceiveCallViewController.swift in Sources */,
 				956472A51CF6A70C000AE953 /* ConfirmationPageViewController.swift in Sources */,
+				956472B31CF85BE0000AE953 /* PizzaViewController.swift in Sources */,
 				956472AD1CF76ECF000AE953 /* ProfileViewController.swift in Sources */,
 				956472A31CF57950000AE953 /* CheckBox.swift in Sources */,
 				951EE1581CF38D910063C6A9 /* fakeCall.xcdatamodeld in Sources */,
@@ -330,6 +337,7 @@
 				956472A91CF76BFD000AE953 /* RegistrationViewController.swift in Sources */,
 				951EE18E1CF51B980063C6A9 /* MapkitViewController.swift in Sources */,
 				951EE18C1CF3C74A0063C6A9 /* AnswerCallViewController.swift in Sources */,
+				956472B51CF89572000AE953 /* MapOfPinsViewController.swift in Sources */,
 				95FCFCBD1CF56588002E854C /* IncidentReportViewController.swift in Sources */,
 				951EE1501CF38D910063C6A9 /* AppDelegate.swift in Sources */,
 				956472A71CF76B6E000AE953 /* LoginViewController.swift in Sources */,

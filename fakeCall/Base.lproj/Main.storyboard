@@ -124,6 +124,7 @@
                         <outlet property="usernameTextField" destination="SAU-aE-PFl" id="dva-Ts-BBj"/>
                         <outlet property="welcomeUsername" destination="1Mn-SC-X8A" id="dm5-9z-Pww"/>
                         <segue destination="9MS-rw-yci" kind="presentation" identifier="profileToContactsSegue" id="CXs-jN-KF4"/>
+                        <segue destination="TPx-oP-Y7R" kind="presentation" identifier="backToHomeSegue" id="0W7-Rh-R2e"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="LQf-BF-SK4" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -366,6 +367,13 @@
                                 <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1Od-R5-rcB">
+                                <rect key="frame" x="20" y="518" width="46" height="30"/>
+                                <state key="normal" title="Button"/>
+                                <connections>
+                                    <action selector="pinMapButtonPressed:" destination="r8z-UF-VlW" eventType="touchUpInside" id="z8t-T0-H9G"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
@@ -383,6 +391,7 @@
                         <outlet property="reportButton" destination="9CA-8I-tzg" id="iKV-Qj-z1F"/>
                         <segue destination="iYg-oE-Oyf" kind="presentation" identifier="incidentSegue" id="D9a-dY-l4G"/>
                         <segue destination="fzE-XT-p0m" kind="presentation" identifier="confirmationSegue" id="8LZ-Aq-can"/>
+                        <segue destination="bSM-bf-JPb" kind="presentation" identifier="pinsSegue" id="6J4-hX-fZX"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CKr-tG-0s8" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -392,7 +401,7 @@
                     </connections>
                 </pongPressGestureRecognizer>
             </objects>
-            <point key="canvasLocation" x="1576" y="-501"/>
+            <point key="canvasLocation" x="1590" y="-531"/>
         </scene>
         <!--Confirmation Page View Controller-->
         <scene sceneID="9L3-Ul-cIQ">
@@ -524,7 +533,7 @@
                                 </state>
                                 <connections>
                                     <action selector="homeButtonPressed:" destination="4Vh-n0-xDC" eventType="touchUpInside" id="lvM-WS-jxz"/>
-                                    <segue destination="TPx-oP-Y7R" kind="presentation" identifier="HeadingHome" modalTransitionStyle="flipHorizontal" id="ggz-f5-Fyl"/>
+                                    <segue destination="TPx-oP-Y7R" kind="presentation" identifier="backToHomeSegue" modalTransitionStyle="flipHorizontal" id="ggz-f5-Fyl"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -542,7 +551,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="E3h-Ll-609" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="3546" y="-2764"/>
+            <point key="canvasLocation" x="3705" y="-2804"/>
         </scene>
         <!--Registration View Controller-->
         <scene sceneID="eFn-qk-HF6">
@@ -675,7 +684,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="OtF-QR-gwb" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="208" y="-661"/>
+            <point key="canvasLocation" x="-184" y="-475"/>
         </scene>
         <!--Incident Report-->
         <scene sceneID="ibX-aR-cS6">
@@ -980,10 +989,10 @@
             </objects>
             <point key="canvasLocation" x="3690" y="-1960"/>
         </scene>
-        <!--View Controller-->
+        <!--Pizza View Controller-->
         <scene sceneID="v44-Lh-KDr">
             <objects>
-                <viewController id="TPx-oP-Y7R" sceneMemberID="viewController">
+                <viewController id="TPx-oP-Y7R" customClass="PizzaViewController" customModule="fakeCall" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="nrz-4J-QX0"/>
                         <viewControllerLayoutGuide type="bottom" id="B5W-Jp-K45"/>
@@ -1043,14 +1052,38 @@
                                     <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 </state>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KD6-Hn-HWc">
+                                <rect key="frame" x="137" y="524" width="46" height="30"/>
+                                <state key="normal" title="Profile">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                    <color key="titleShadowColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="profileButtonPressed:" destination="TPx-oP-Y7R" eventType="touchUpInside" id="5Qs-3o-bwp"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jhL-vE-U62">
+                                <rect key="frame" x="29" y="276" width="271" height="30"/>
+                                <connections>
+                                    <action selector="textMessageButtonPressed:" destination="TPx-oP-Y7R" eventType="touchUpInside" id="U8N-GO-wHS"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Cwn-BL-8fl">
+                                <rect key="frame" x="66" y="87" width="182" height="96"/>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="logOutButton" destination="Cwn-BL-8fl" id="1sm-Y5-Plx"/>
+                        <outlet property="profileButton" destination="KD6-Hn-HWc" id="Mvp-XS-Uxp"/>
+                        <segue destination="Alp-Hd-WHw" kind="presentation" identifier="homeToProfileSegue" modalTransitionStyle="flipHorizontal" id="R6k-ok-PGU"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="CC6-N7-g1s" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="575" y="262"/>
+            <point key="canvasLocation" x="3280" y="-3037"/>
         </scene>
         <!--Receive Call View Controller-->
         <scene sceneID="IsC-bF-cH0">
@@ -1172,12 +1205,18 @@
                                 <state key="normal" title="Email">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="sendMessage:" destination="0kl-vO-R5Z" eventType="touchUpInside" id="qtf-7D-mP3"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lms-XG-UAm">
                                 <rect key="frame" x="197" y="344" width="98" height="30"/>
                                 <state key="normal" title="play recording">
                                     <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="playsound:" destination="0kl-vO-R5Z" eventType="touchUpInside" id="57k-p5-NlT"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Lsr-HC-tRu">
                                 <rect key="frame" x="200" y="259" width="100" height="30"/>
@@ -1190,6 +1229,8 @@
                     </view>
                     <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
                     <connections>
+                        <outlet property="playButton" destination="lms-XG-UAm" id="Srr-aI-T0U"/>
+                        <outlet property="recordButton" destination="Lsr-HC-tRu" id="ftt-cc-SgR"/>
                         <outlet property="timerLabel" destination="w0M-wR-pYY" id="wBR-la-LXo"/>
                     </connections>
                 </viewController>
@@ -1289,6 +1330,44 @@
             </objects>
             <point key="canvasLocation" x="705" y="-1542"/>
         </scene>
+        <!--Map Of Pins View Controller-->
+        <scene sceneID="iYL-Ge-XnN">
+            <objects>
+                <viewController id="bSM-bf-JPb" customClass="MapOfPinsViewController" customModule="fakeCall" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="457-nE-l0m"/>
+                        <viewControllerLayoutGuide type="bottom" id="QSy-0B-CQJ"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="ejH-F6-iK5">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <mapView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" fixedFrame="YES" mapType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="js6-xg-CdK">
+                                <rect key="frame" x="-6" y="-7" width="332" height="580"/>
+                                <connections>
+                                    <outlet property="delegate" destination="bSM-bf-JPb" id="fBx-M1-Dg3"/>
+                                </connections>
+                            </mapView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iuC-Sd-MgI">
+                                <rect key="frame" x="8" y="0.0" width="46" height="30"/>
+                                <state key="normal" title="Home"/>
+                                <connections>
+                                    <action selector="homeButtonPressed:" destination="bSM-bf-JPb" eventType="touchUpInside" id="5JN-bX-rnc"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                    <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina4"/>
+                    <connections>
+                        <outlet property="mapOfPins" destination="js6-xg-CdK" id="n56-CP-TG3"/>
+                        <segue destination="TPx-oP-Y7R" kind="presentation" identifier="backToHomeSegue" id="RI4-Uz-zdb"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="HFI-sN-nMW" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="809" y="-82"/>
+        </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="NRn-0v-onL">
             <objects>
@@ -1320,11 +1399,11 @@
     </resources>
     <inferredMetricsTieBreakers>
         <segue reference="540-fg-wiV"/>
-        <segue reference="36J-iD-5kR"/>
-        <segue reference="JB9-ZA-nyr"/>
-        <segue reference="svW-Nd-xqB"/>
+        <segue reference="RI4-Uz-zdb"/>
+        <segue reference="Z6p-sO-pqv"/>
+        <segue reference="2gU-la-dsC"/>
+        <segue reference="R6k-ok-PGU"/>
+        <segue reference="opf-EB-HgC"/>
         <segue reference="A3S-JV-53T"/>
-        <segue reference="NeF-6X-qJM"/>
-        <segue reference="N7H-lJ-tdP"/>
     </inferredMetricsTieBreakers>
 </document>
