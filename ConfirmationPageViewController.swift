@@ -16,6 +16,7 @@ class ConfirmationPageViewController: UITableViewController {
     var locationCoords = NSUserDefaults.standardUserDefaults().stringForKey("locationCoords")
     var incidentDescription = NSUserDefaults.standardUserDefaults().stringForKey("incidentDescription")
     var dateOfIncident = NSUserDefaults.standardUserDefaults().stringForKey("incidentDate")
+    let userID = NSUserDefaults.standardUserDefaults().stringForKey("userID")
     
     
     
@@ -173,9 +174,13 @@ class ConfirmationPageViewController: UITableViewController {
     }
     
     @IBAction func saveButtonPressed(sender: UIBarButtonItem) {
-       let appDomain = NSBundle.mainBundle().bundleIdentifier!
-        NSUserDefaults.standardUserDefaults().removePersistentDomainForName(appDomain)
-        performSegueWithIdentifier("backToHomeSegue", sender: self)
+        print("incident data to send", userID, incidentIDArray, locationCoords, incidentDescription, dateOfIncident)
+        let myURL = NSURL(string: "http://52.38.127.224/incidents/add_incident")
+        let postString = "userid=\(userID!)&date=\(dateOfIncident!)&desc=\(incidentDescription!)&coords=\(locationCoords!)"
+      
+        
+        
+//        performSegueWithIdentifier("backToHomeSegue", sender: self)
         
         
     }
