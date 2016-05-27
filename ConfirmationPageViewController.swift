@@ -175,14 +175,48 @@ class ConfirmationPageViewController: UITableViewController {
     
     @IBAction func saveButtonPressed(sender: UIBarButtonItem) {
         print("incident data to send", userID, incidentIDArray, locationCoords, incidentDescription, dateOfIncident)
+        if incidentDescription! == "Describe the incident." {
+            incidentDescription = "No description provided"
+        }
         let myURL = NSURL(string: "http://52.38.127.224/incidents/add_incident")
+        let request = NSMutableURLRequest(URL: myURL!)
+         request.HTTPMethod = "POST"
         let postString = "userid=\(userID!)&date=\(dateOfIncident!)&desc=\(incidentDescription!)&coords=\(locationCoords!)"
-      
+        request.HTTPBody = postString.dataUsingEncoding(NSUTF8StringEncoding)
+    
+        let task = NSURLSession.sharedSession().dataTaskWithRequest(request){
+            data, response, error in
+            if error != nil {
+                print("error = \(error)")
+                return
+            }
+            var err: NSError?
+            
+            do {
+                if let jsonResult = try NSJSONSerialization.JSONObjectWithData(data!, options: .MutableContainers) as? NSDictionary {
+                    print("after registration button", jsonResult)
+                    let incidentID = jsonResult["addedIncident"]
+                    print("longsoughtid", incidentID)
+                    self.saveIncidentTypes(incidentID as! NSNumber)
+                    }//closes if let jsonResult
+            }//closes do
+            catch {
+                print(error)
+            }
+        }//closes let task
+        task.resume()
+
+    }
+    
+    func saveIncidentTypes(typeID: NSNumber) {
+        print("Look at this!", typeID)
+        let postString = "incidentID=\(typeID)&categoryIDs=\(incidentIDArray!)"
+        print(postString)
+    }
         
         
 //        performSegueWithIdentifier("backToHomeSegue", sender: self)
         
         
-    }
     
 }
